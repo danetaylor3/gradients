@@ -1,7 +1,7 @@
 <h1 align="center">@danetaylor3/gradients</h1>
 
 <p align="center">
-  Generative gradient avatars for React. Every seed renders a unique mesh gradient (or a crisp ordered dither) with no stored images and no network.
+  Generative gradient avatars for React. Every seed renders a unique mesh gradient with no stored images and no network.
 </p>
 
 <p align="center">
