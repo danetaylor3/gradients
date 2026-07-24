@@ -13,8 +13,8 @@
 </p>
 
 <p align="center">
-  <a href="https://avatars.outpacestudios.com"><b>Live playground →</b></a> &nbsp;·&nbsp;
-  <a href="https://avatars.outpacestudios.com/docs"><b>Docs →</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/danetaylor3/gradients"><b>Live playground →</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/danetaylor3/gradients/docs"><b>Docs →</b></a> &nbsp;·&nbsp;
   <a href="https://www.npmjs.com/package/@danetaylor3/gradients"><b>npm →</b></a>
 </p>
 
@@ -45,14 +45,14 @@ function UserAvatar({ user }) {
 
 Full API, props, and engine helpers are in the
 **[package README](./packages/avatars/README.md)** and the
-**[docs site](https://avatars.outpacestudios.com/docs)**.
+**[docs site](https://github.com/danetaylor3/gradients/docs)**.
 
 ## What's in this repo
 
 | Path | What |
 |------|------|
 | [`packages/avatars`](./packages/avatars) | **`@danetaylor3/gradients`**, the published React component + bundled gradient engine. |
-| [`src`](./src) | The Next.js site at [avatars.outpacestudios.com](https://avatars.outpacestudios.com), the live generator and docs. |
+| [`src`](./src) | The Next.js site, the live generator and docs. |
 
 ## Local development
 
@@ -70,4 +70,4 @@ The package lives in [`packages/avatars`](./packages/avatars); `pnpm packages:bu
 
 ## License
 
-[MIT](./LICENSE), free to use. By [Outpace Studios](https://outpacestudios.com).
+[MIT](./LICENSE), free to use. By [Dane Taylor](https://outpacestudios.com).

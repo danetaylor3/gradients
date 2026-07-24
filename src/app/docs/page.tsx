@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 	title: "Docs",
 	description: DOCS_DESCRIPTION,
 	alternates: {
-		canonical: "https://avatars.outpacestudios.com/docs",
+		canonical: "https://github.com/danetaylor3/gradients/docs",
 	},
 	openGraph: {
 		type: "website",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
 		siteName: "@danetaylor3/gradients",
 		title: "Docs | @danetaylor3/gradients",
 		description: DOCS_OG_DESCRIPTION,
-		url: "https://avatars.outpacestudios.com/docs",
+		url: "https://github.com/danetaylor3/gradients/docs",
 		images: [
 			{
 				url: "/meta.jpg",
 				width: 1200,
 				height: 630,
-				alt: "@danetaylor3/gradients, by Outpace Studios",
+				alt: "@danetaylor3/gradients, by Dane Taylor",
 			},
 		],
 	},
@@ -39,12 +39,10 @@ export const metadata: Metadata = {
 		title: "Docs | @danetaylor3/gradients",
 		description: DOCS_OG_DESCRIPTION,
 		images: ["/meta.jpg"],
-		site: "@outpacestudios",
-		creator: "@outpacestudios",
 	},
 };
 
-const SITE = "https://avatars.outpacestudios.com";
+const SITE = "https://github.com/danetaylor3/gradients";
 
 // Page-scoped structured data: breadcrumb + a TechArticle for the docs. The
 // `about`/`author` @ids resolve against the root-layout graph on the same page.

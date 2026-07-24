@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 				url: "/meta.jpg",
 				width: 1200,
 				height: 630,
-				alt: "@danetaylor3/gradients, by Outpace Studios",
+				alt: "@danetaylor3/gradients, by Dane Taylor",
 			},
 		],
 	},
@@ -39,8 +39,6 @@ export const metadata: Metadata = {
 		title: "Changelog | @danetaylor3/gradients",
 		description: CHANGELOG_OG_DESCRIPTION,
 		images: ["/meta.jpg"],
-		site: "@outpacestudios",
-		creator: "@outpacestudios",
 	},
 };
 

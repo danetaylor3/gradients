@@ -1,6 +1,5 @@
 "use client";
 
-import { tap as tapSound } from "@outpacelabs/audio";
 import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 import type { Pattern } from "@/lib/avatars/patterns";
@@ -119,7 +118,6 @@ export function PatternSwitch({
 						aria-pressed={active}
 						onClick={() => {
 							if (!active) {
-								tapSound();
 								onChange(v);
 							}
 						}}

@@ -1,12 +1,11 @@
 import type { ReactNode } from "react";
 
 /**
- * Shared page sign-off: a thin divider above the Outpace Studios footer.
+ * Shared page sign-off: a thin divider above the Dane Taylor footer.
  * The docs and changelog both end with this, so it lives in one place.
  */
 
 const INK = "rgba(255,255,255,0.92)";
-const BODY = "rgba(255,255,255,0.62)";
 
 function FooterLink({ href, children }: { href: string; children: ReactNode }) {
 	return (
@@ -67,26 +66,12 @@ export function SiteFooter() {
 								color: INK,
 							}}
 						>
-							By Outpace Studios
-						</p>
-						<p
-							style={{
-								margin: 0,
-								fontSize: 14,
-								lineHeight: 1.45,
-								letterSpacing: "0.1px",
-								color: BODY,
-							}}
-						>
-							Brands, interfaces, and motion for
-							<br />
-							venture-backed companies
+							By Dane Taylor
 						</p>
 					</div>
 					<div style={{ display: "flex", gap: 16, fontSize: 14 }}>
-						<FooterLink href="https://outpacestudios.com">Website</FooterLink>
-						<FooterLink href="https://x.com/outpacestudios">
-							X / Twitter
+						<FooterLink href="https://github.com/danetaylor3/gradients">
+							GitHub
 						</FooterLink>
 					</div>
 				</div>

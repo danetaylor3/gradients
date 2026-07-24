@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 // Single-sourced from the canonical host so it can never drift from
 // metadataBase (the old static robots.txt pointed at a legacy domain).
-const baseUrl = "https://avatars.outpacestudios.com";
+const baseUrl = "https://github.com/danetaylor3/gradients";
 
 export default function robots(): MetadataRoute.Robots {
 	return {

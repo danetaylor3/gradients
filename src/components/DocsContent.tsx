@@ -16,8 +16,8 @@ import { useScrollSpy } from "@/lib/use-scroll-spy";
 import { useSmoothCorners } from "@/lib/utils/useSmoothCorners";
 
 /*
- * Docs styled after the Outpace "Liquid Glass" article (outpacelabs/glass):
- * a thin ~640px reading column, understated small typography, generous section
+ * Docs styled as a thin ~640px reading column, understated small typography,
+ * with generous section
  * spacing, a right-gutter table of contents with a dot that snaps to the active
  * section, and borderless rounded code surfaces, kept in dark mode.
  */

@@ -1,19 +1,11 @@
 "use client";
 
-import {
-	close as closeSound,
-	open as openSound,
-	tap as tapSound,
-	turn as turnSound,
-} from "@outpacelabs/audio";
-import { ChevronDownIcon } from "@radix-ui/react-icons";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import posthog from "posthog-js";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
-export const OutpaceLogo = () => (
+export const Logo = () => (
 	<svg
 		aria-hidden="true"
 		width="33"
@@ -53,7 +45,7 @@ const GithubMark = () => (
 	</svg>
 );
 
-const GH_REPO = "outpacelabs/avatars";
+const GH_REPO = "danetaylor3/gradients";
 
 /** Compact star count, e.g. 1234 → "1.2k", 12300 → "12k". */
 function formatStars(n: number): string {
@@ -93,106 +85,6 @@ function useGitHubStars(): number | null {
 	}, []);
 
 	return stars;
-}
-
-/* ── the "More" switcher: the sibling labs sites, favicon and all. Each row
-      loads the live /icon.png straight from the sibling, so there is nothing
-      to copy around when a favicon changes. Dark frosted panel to match the
-      header's white-on-glass pills. Hidden for now, flip to re-enable. ── */
-const SHOW_MORE_MENU = false;
-const LABS = [
-	{ name: "avatars", href: "https://avatars.outpacestudios.com" },
-	{ name: "smooth", href: "https://smooth.outpacestudios.com" },
-	{ name: "audio", href: "https://audio.outpacestudios.com" },
-];
-const CURRENT_LAB = "avatars";
-const EASE_OUT = [0.22, 1, 0.36, 1] as const;
-
-function LabsMenu() {
-	const [menuOpen, setMenuOpen] = useState(false);
-	const rootRef = useRef<HTMLDivElement>(null);
-
-	useEffect(() => {
-		if (!menuOpen) return;
-		const onDown = (e: PointerEvent) => {
-			if (!rootRef.current?.contains(e.target as Node)) {
-				closeSound();
-				setMenuOpen(false);
-			}
-		};
-		const onKey = (e: KeyboardEvent) => {
-			if (e.key === "Escape") {
-				closeSound();
-				setMenuOpen(false);
-			}
-		};
-		window.addEventListener("pointerdown", onDown);
-		window.addEventListener("keydown", onKey);
-		return () => {
-			window.removeEventListener("pointerdown", onDown);
-			window.removeEventListener("keydown", onKey);
-		};
-	}, [menuOpen]);
-
-	return (
-		<div ref={rootRef} className="relative">
-			<button
-				type="button"
-				aria-haspopup="menu"
-				aria-expanded={menuOpen}
-				aria-label="More Outpace Labs projects"
-				onClick={() => {
-					if (menuOpen) closeSound();
-					else openSound();
-					setMenuOpen(!menuOpen);
-				}}
-				className="inline-flex cursor-pointer items-center gap-1.5 rounded-full bg-white/[0.08] py-2.5 pl-3.5 pr-3 text-sm font-[550] leading-none text-white/[0.96] transition hover:bg-white/[0.12] motion-safe:active:scale-[0.97]"
-			>
-				More
-				<ChevronDownIcon
-					aria-hidden="true"
-					width={13}
-					height={13}
-					className={`transition-transform duration-200 ${menuOpen ? "rotate-180" : ""}`}
-				/>
-			</button>
-			{menuOpen && (
-				<motion.div
-					role="menu"
-					initial={{ opacity: 0, y: -4, scale: 0.98 }}
-					animate={{ opacity: 1, y: 0, scale: 1 }}
-					transition={{ duration: 0.16, ease: EASE_OUT }}
-					className="absolute right-0 top-[calc(100%+8px)] z-20 w-44 rounded-[12px] bg-white/[0.08] p-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.45)] backdrop-blur-2xl"
-				>
-					{LABS.map((site) => (
-						<a
-							key={site.name}
-							role="menuitem"
-							href={site.href}
-							aria-current={site.name === CURRENT_LAB ? "page" : undefined}
-							onClick={() => tapSound()}
-							className="flex items-center gap-2.5 rounded-[8px] px-2.5 py-2 text-sm font-[550] leading-none text-white/[0.96] transition-colors hover:bg-white/[0.12]"
-						>
-							{/* eslint-disable-next-line @next/next/no-img-element */}
-							<img
-								src={`${site.href}/icon.png`}
-								alt=""
-								width={16}
-								height={16}
-								className="rounded-[4px]"
-							/>
-							{site.name}
-							{site.name === CURRENT_LAB && (
-								<span className="ml-auto text-[11px] text-white/[0.4]">
-									current
-								</span>
-							)}
-						</a>
-					))}
-				</motion.div>
-			)}
-		</div>
-	);
 }
 
 // Glass nav type: 14px / weight 550 / rgba(255,255,255,0.96), no letter-spacing.
@@ -236,7 +128,7 @@ export function SiteHeader() {
 				aria-label="Avatars, home"
 				className="flex items-center transition-opacity hover:opacity-80"
 			>
-				<OutpaceLogo />
+				<Logo />
 			</Link>
 			{/* Nav links, centered in the bar. */}
 			<nav className="absolute left-1/2 -translate-x-1/2 flex items-center gap-4 md:gap-5">
@@ -247,10 +139,6 @@ export function SiteHeader() {
 							key={item.href}
 							href={item.href}
 							aria-current={active ? "page" : undefined}
-							onClick={() => {
-								// Page-turn gesture: back toward home, forward elsewhere.
-								if (!active) turnSound(item.href === "/" ? "back" : "forward");
-							}}
 							className={navLink(active)}
 						>
 							{item.label}
@@ -263,14 +151,13 @@ export function SiteHeader() {
 			    public); ours links to the live public repo. */}
 			<div className="flex items-center gap-2">
 				<a
-					href="https://github.com/outpacelabs/avatars"
+					href="https://github.com/danetaylor3/gradients"
 					target="_blank"
 					rel="noopener"
 					aria-label="GitHub repository"
 					onClick={() => {
-						tapSound();
 						posthog.capture("External Link Clicked", {
-							link_url: "https://github.com/outpacelabs/avatars",
+							link_url: "https://github.com/danetaylor3/gradients",
 							link_location: "header",
 							link_text: "GitHub",
 						});
@@ -288,7 +175,6 @@ export function SiteHeader() {
 						</span>
 					)}
 				</a>
-				{SHOW_MORE_MENU && <LabsMenu />}
 			</div>
 		</header>
 	);

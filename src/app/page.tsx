@@ -1,10 +1,5 @@
 "use client";
 
-import {
-	confirm as confirmSound,
-	copy as copySound,
-	deny as denySound,
-} from "@outpacelabs/audio";
 import { motion } from "framer-motion";
 import { Fragment, useCallback, useEffect, useRef, useState } from "react";
 import { GradientAvatar } from "@/components/GradientAvatar";
@@ -44,7 +39,7 @@ function SeoContent() {
 			</p>
 			<nav aria-label="Primary">
 				<a href="/docs">Read the documentation</a>
-				<a href="https://github.com/outpacelabs/avatars">
+				<a href="https://github.com/danetaylor3/gradients">
 					View source on GitHub
 				</a>
 				<a href="https://www.npmjs.com/package/@danetaylor3/gradients">
@@ -150,11 +145,10 @@ function NpmInstall() {
 				void navigator.clipboard
 					?.writeText("npm i @danetaylor3/gradients")
 					.then(() => {
-						copySound();
 						setCopied(true);
 						window.setTimeout(() => setCopied(false), 1400);
 					})
-					.catch(() => denySound());
+					.catch(() => {});
 			}}
 			className="group/npm flex h-12 items-center gap-3 rounded-full bg-white/[0.08] pl-5 pr-2 transition hover:bg-white/[0.12] motion-safe:active:scale-[0.98] cursor-pointer"
 		>
@@ -440,10 +434,7 @@ function GradientCard({
 	const copy = () => {
 		void copyGradient(seed, pattern).then((ok) => {
 			if (ok) {
-				copySound();
 				window.dispatchEvent(new CustomEvent("show-toast"));
-			} else {
-				denySound();
 			}
 		});
 	};
@@ -503,9 +494,7 @@ function GradientCard({
 				)}
 				<IconButton
 					onClick={() => {
-						void downloadGradient(seed, pattern).then((ok) =>
-							ok ? confirmSound() : denySound(),
-						);
+						void downloadGradient(seed, pattern);
 					}}
 					title="Download 2000×2000"
 				>
@@ -561,18 +550,13 @@ export default function Home() {
 	const copyHero = useCallback(() => {
 		void copyGradient(heroSeed, pattern).then((ok) => {
 			if (ok) {
-				copySound();
 				window.dispatchEvent(new CustomEvent("show-toast"));
-			} else {
-				denySound();
 			}
 		});
 	}, [heroSeed, pattern]);
 
 	const exportHero = useCallback(() => {
-		void downloadGradient(heroSeed, pattern).then((ok) =>
-			ok ? confirmSound() : denySound(),
-		);
+		void downloadGradient(heroSeed, pattern);
 	}, [heroSeed, pattern]);
 
 	return (
@@ -698,14 +682,7 @@ export default function Home() {
 			<div className="flex flex-col gap-10 items-center text-center mt-20 px-4">
 				<div className="flex flex-col gap-1.5 items-center text-sm leading-5 tracking-[0.14px]">
 					<p className="font-medium text-white/[0.48]">Handcrafted by</p>
-					<a
-						href="https://outpacestudios.com"
-						target="_blank"
-						className="font-semibold text-white/[0.88]"
-						rel="noopener"
-					>
-						Outpace Studios
-					</a>
+					<span className="font-semibold text-white/[0.88]">Dane Taylor</span>
 				</div>
 				<p className="text-xs font-medium text-white/[0.48] leading-4 tracking-[0.12px]">
 					Free to use, licensed under the{" "}

@@ -2,7 +2,7 @@
 
 /*
  * useScrollSpy, universal table-of-contents active-section tracking + click
- * scroll, reusable across pages. Ported from outpacelabs/glass.
+ * scroll, reusable across pages.
  *
  * Detection: scroll-position based, with an in-view line that ramps DOWN the
  * viewport for later sections (0.4vh → 0.9vh). A fixed line can't activate

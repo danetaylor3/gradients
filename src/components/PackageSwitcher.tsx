@@ -1,10 +1,5 @@
 "use client";
 
-import {
-	copy as copySound,
-	deny as denySound,
-	tap as tapSound,
-} from "@outpacelabs/audio";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useSmoothCorners } from "@/lib/utils/useSmoothCorners";
@@ -213,11 +208,10 @@ export function PackageSwitcher({
 		void navigator.clipboard
 			?.writeText(cur.command)
 			.then(() => {
-				copySound();
 				setCopied(true);
 				window.setTimeout(() => setCopied(false), 1400);
 			})
-			.catch(() => denySound());
+			.catch(() => {});
 	};
 
 	return (
@@ -256,7 +250,6 @@ export function PackageSwitcher({
 							type="button"
 							className={`pkg-tab pkg-mgr${isActive ? " is-active" : ""}`}
 							onClick={() => {
-								if (i !== active) tapSound();
 								setActive(i);
 							}}
 							style={{

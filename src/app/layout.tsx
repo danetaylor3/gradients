@@ -57,7 +57,7 @@ const jsonLd = {
 			softwareRequirements: "React 18 or newer",
 			programmingLanguage: "TypeScript",
 			softwareVersion: PACKAGE_VERSION,
-			codeRepository: "https://github.com/outpacelabs/avatars",
+			codeRepository: "https://github.com/danetaylor3/gradients",
 			license: "https://opensource.org/license/mit",
 			isAccessibleForFree: true,
 			offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
@@ -66,7 +66,7 @@ const jsonLd = {
 			keywords:
 				"generative avatars, gradient avatars, react avatar component, mesh gradient, ordered dither, dither avatars, deterministic avatars",
 			sameAs: [
-				"https://github.com/outpacelabs/avatars",
+				"https://github.com/danetaylor3/gradients",
 				"https://www.npmjs.com/package/@danetaylor3/gradients",
 			],
 		},
@@ -97,17 +97,9 @@ const jsonLd = {
 		{
 			"@type": "Organization",
 			"@id": `${SITE}/#organization`,
-			name: "Outpace Studios",
-			url: "https://outpacestudios.com",
-			logo: {
-				"@type": "ImageObject",
-				url: "https://outpacestudios.com/favicon.svg",
-			},
-			sameAs: [
-				"https://www.linkedin.com/company/outpacestudios/",
-				"https://twitter.com/outpacestudios",
-				"https://github.com/outpacelabs",
-			],
+			name: "Dane Taylor",
+			url: SITE,
+			sameAs: ["https://github.com/danetaylor3"],
 		},
 	],
 };
@@ -118,7 +110,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://avatars.outpacestudios.com"),
+	metadataBase: new URL("https://github.com/danetaylor3/gradients"),
 	title: {
 		default: TITLE,
 		template: "%s | @danetaylor3/gradients",
@@ -140,14 +132,14 @@ export const metadata: Metadata = {
 		"boring avatars alternative",
 		"dicebear alternative",
 	],
-	authors: [{ name: "Outpace Studios", url: "https://outpacestudios.com" }],
-	creator: "Outpace Studios",
-	publisher: "Outpace Studios",
+	authors: [{ name: "Dane Taylor", url: "https://github.com/danetaylor3/gradients" }],
+	creator: "Dane Taylor",
+	publisher: "Dane Taylor",
 	formatDetection: { email: false, address: false, telephone: false },
 	openGraph: {
 		type: "website",
 		locale: "en_US",
-		url: "https://avatars.outpacestudios.com",
+		url: "https://github.com/danetaylor3/gradients",
 		siteName: "@danetaylor3/gradients",
 		title: TITLE,
 		description: OG_DESCRIPTION,
@@ -156,7 +148,7 @@ export const metadata: Metadata = {
 				url: "/meta.jpg",
 				width: 1200,
 				height: 630,
-				alt: "@danetaylor3/gradients, by Outpace Studios",
+				alt: "@danetaylor3/gradients, by Dane Taylor",
 			},
 		],
 	},
@@ -165,8 +157,6 @@ export const metadata: Metadata = {
 		title: TITLE,
 		description: TWITTER_DESCRIPTION,
 		images: ["/meta.jpg"],
-		site: "@outpacestudios",
-		creator: "@outpacestudios",
 	},
 	robots: {
 		index: true,

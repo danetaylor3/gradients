@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://avatars.outpacestudios.com";
+const baseUrl = "https://github.com/danetaylor3/gradients";
 
 export default function sitemap(): MetadataRoute.Sitemap {
 	const lastModified = new Date().toISOString();

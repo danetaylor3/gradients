@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
 	return {
-		name: "Beautiful Generative Gradient Avatars by Outpace Studios",
+		name: "Beautiful Generative Gradient Avatars by Dane Taylor",
 		short_name: "Avatars",
 		description:
 			"Beautiful generative gradient avatars, free to use. Every seed renders a unique gradient.",

@@ -1,11 +1,5 @@
 "use client";
 
-import {
-	confirm as confirmSound,
-	copy as copySound,
-	deny as denySound,
-	tap as tapSound,
-} from "@outpacelabs/audio";
 import { ShuffleIcon } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
 import posthog from "posthog-js";
@@ -375,7 +369,6 @@ function Segmented<T extends string>({
 						aria-pressed={active}
 						onClick={() => {
 							if (!active) {
-								tapSound();
 								onChange(opt.value);
 							}
 						}}
@@ -559,7 +552,6 @@ export function CreateContent() {
 		void navigator.clipboard
 			?.writeText(codeText(attrs))
 			.then(() => {
-				copySound();
 				setCopiedCode(true);
 				window.setTimeout(() => setCopiedCode(false), 1400);
 				posthog.capture("Create Code Copied", {
@@ -571,7 +563,7 @@ export function CreateContent() {
 					harmony,
 				});
 			})
-			.catch(() => denySound());
+			.catch(() => {});
 	};
 
 	const reveal = (delay: number) => ({
@@ -672,10 +664,7 @@ export function CreateContent() {
 														blurFraction,
 													).then((ok) => {
 														if (ok) {
-															copySound();
 															toast();
-														} else {
-															denySound();
 														}
 													});
 												}}
@@ -691,7 +680,7 @@ export function CreateContent() {
 													pattern,
 													harmony,
 													blurFraction,
-												).then((ok) => (ok ? confirmSound() : denySound()));
+												);
 											}}
 											title="Download 2000×2000"
 										>
@@ -724,7 +713,6 @@ export function CreateContent() {
 										/>
 										<IconButton
 											onClick={() => {
-												tapSound();
 												setSeed(randomSeed());
 											}}
 											title="Random seed"

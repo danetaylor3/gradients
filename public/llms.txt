@@ -53,8 +53,8 @@ import { GradientAvatar } from "@danetaylor3/gradients";
 
 ## Links
 
-- Documentation: https://avatars.outpacestudios.com/docs
-- Source: https://github.com/outpacelabs/avatars
+- Documentation: https://github.com/danetaylor3/gradients/docs
+- Source: https://github.com/danetaylor3/gradients
 - Package: https://www.npmjs.com/package/@danetaylor3/gradients
 - License: MIT (https://opensource.org/license/mit)
-- Author: Outpace Studios (https://outpacestudios.com)
+- Author: Dane Taylor

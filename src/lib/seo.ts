@@ -1,6 +1,6 @@
 /** Shared SEO constants used by metadata, JSON-LD, and the indexable copy. */
 
-export const SITE = "https://avatars.outpacestudios.com";
+export const SITE = "https://github.com/danetaylor3/gradients";
 
 /**
  * Single source of truth for the site's positioning line. Feeds the home

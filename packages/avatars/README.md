@@ -1,5 +1,5 @@
-<a href="https://avatars.outpacestudios.com">
-  <img src="https://avatars.outpacestudios.com/meta.jpg" alt="@danetaylor3/gradients, by Outpace Studios" width="100%" />
+<a href="https://github.com/danetaylor3/gradients">
+  <img src="https://github.com/danetaylor3/gradients/meta.jpg" alt="@danetaylor3/gradients, by Dane Taylor" width="100%" />
 </a>
 
 <h1 align="center">@danetaylor3/gradients</h1>
@@ -17,8 +17,8 @@
 </p>
 
 <p align="center">
-  <a href="https://avatars.outpacestudios.com"><b>Live playground →</b></a> &nbsp;·&nbsp;
-  <a href="https://avatars.outpacestudios.com/docs"><b>Docs →</b></a>
+  <a href="https://github.com/danetaylor3/gradients"><b>Live playground →</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/danetaylor3/gradients/docs"><b>Docs →</b></a>
 </p>
 
 ---
@@ -159,8 +159,8 @@ Types `GradientPalette`, `Harmony`, `PaletteOptions`, `DrawOptions`,
 
 ## Playground
 
-Type any seed and watch the gradient at **[avatars.outpacestudios.com](https://avatars.outpacestudios.com)**, then copy it to your clipboard or download a 2000×2000 image. Full docs at **[/docs](https://avatars.outpacestudios.com/docs)**.
+Type any seed and watch the gradient render, then copy it to your clipboard or download a 2000×2000 image. Full docs at **[/docs](https://github.com/danetaylor3/gradients/tree/main/src/app/docs)**.
 
 ## License
 
-[MIT](./LICENSE), free to use. By [Outpace Studios](https://outpacestudios.com).
+[MIT](./LICENSE), free to use. By [Dane Taylor](https://outpacestudios.com).
