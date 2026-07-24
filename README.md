@@ -1,7 +1,3 @@
-<a href="https://avatars.outpacestudios.com">
-  <img src="https://avatars.outpacestudios.com/meta.jpg" alt="@danetaylor3/gradients, by Outpace Studios" width="100%" />
-</a>
-
 <h1 align="center">@danetaylor3/gradients</h1>
 
 <p align="center">
